@@ -1,44 +1,86 @@
-
 <!DOCTYPE html>
 <html>
 
 <head>
-	<title>Poisson D'Avril</title>
-  <meta charset="utf-8">
-  <link rel="shortcut icon" href="images/default.artwork.troto.small.png" />
-	<style>
-		h1 {
-			color: green;
-      font-size: 80px;
-		}
+    <title>La premiere ferme electrotechnique de l'information.</title>
+    <meta name="description" contentn="Toutes les informations, opportunités et recompenses du mois d'Avril regroupées en un seul lieu."/>
+    <meta charset="utf-8"/>
+    <link rel="shortcut icon" href="images/default.artwork.troto.small.png"/>
+    <meta name="viewport"
+          content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <style>
+        h1 {
+            color: green;
+            font-size: 80px;
+        }
 
-		h2 {
-			font-family: Impact;
-      font-size: 27px;
-      line-height: 1.75;
-      font-weight: 400;
-		}
+        h2 {
+            font-family: Impact;
+            font-size: 27px;
+            line-height: 1.75;
+            font-weight: 400;
+        }
 
-		body {
-			text-align: center;
-		}
-	</style>
+        body {
+            text-align: center;
+        }
+    </style>
 </head>
 
 <body>
+<div id="zoneDisplayFirstClic" style="padding-top:4.5cm;">
+    <div style="text-align: center;">Chargement ...<br/><br/></div>
+    <button onclick="cliquerPourMontrerAvrilPoisson()"
+            style="padding:10px;font-size:20px;border-radius: 10px;background: #292982;color:white;">Cliquer ici pour
+        continuer
+    </button>
+</div>
+<div id="zoneHiddenAfterClic" style="display:none;">
+    <h1>😂</h1>
+    <h2>Poisson d'Avril</h2>
 
-	<h1>Poisson d'Avril</h1>
-	<h2>Amusons nous un peu</h2>
+    <p>
+        Soyez rassur&eacute;s, c'est Avril, on s'amuse.
+    </p>
 
-	<p>
-    Pour voir le poisson d'Avril, cliquez sur ce bouton.
-	</p>
+    <div style="text-align: center;">
+        <div style="width:300px;display:inline-block;padding:10px;padding-left:20px;padding-right:20px;background: #F7f7f7;box-shadow: 0px 0px 10px #d7d7d7;margin-top:20px;">
+            <a style="text-decoration: none;" href="https://play.google.com/store/apps/details?id=com.nfinic.troto">
+                <div style="margin-top:10px;margin-bottom: 10px;">T&eacute;l&eacute;charges Troto ici et trouves-y des
+                    blagues &agrave; partager avec tes proches.
+                </div>
+                <img style="height:50px;width:auto;" src="images/gplay.png"/>
+            </a>
 
-  <ul>
-    <li><a href="https://play.google.com/store/apps/details?id=com.nfinic.troto"><img style="height:2cm;width:auto;" src="images/gplay.png"</a></li>
+        </div>
+        <br/>
+        <div style="text-align: center;margin-top:30px;width:250px;display:inline-block;font-size:20px;">
+            Pr&egrave;s de 100 blagues disponibles dans l'application &agrave; partager gratuitement.
+        </div>
+    </div>
 
-  </ul>
+    <div>
+        <img style="width:100%;margin-top:100px;" src="images/man.jpg"/>
+    </div>
+    <div style="margin-top:50px;margin-bottom:50px;">
+        <a style="text-decoration: none;color:white;" href="https://troto.co">&copy; Troto</a>
+    </div>
+</div>
 
+<!--<iframe src="preview.mp3" allow="autoplay" id="audio"></iframe>-->
+<audio id="audioControlPreview" src="preview.mp3"></audio>
+<script type="text/javascript">
+    function cliquerPourMontrerAvrilPoisson() {
+        var audio = document.getElementById("audioControlPreview");
+        audio.play();
+        document.getElementById("zoneDisplayFirstClic").style.display = "none";
+        document.getElementById("zoneHiddenAfterClic").style.display = "block";
+        var body = document.getElementsByTagName("body")[0];
+        body.style.background = "#0b0b4a";
+        body.style.color = "white";
+    }
+
+</script>
 </body>
 
 </html>
